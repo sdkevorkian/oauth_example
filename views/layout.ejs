@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+        <!-- BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+
+        <%include partials/alerts%>
+        <%- body%>
+        <hr>
+        <a href="/" class="btn btn-primary">Home</a>
+        <a href="/profile" class="btn btn-info">Profile</a>
+        <a href="/auth/login" class="btn btn-primary">Login</a>
+        <a href="/auth/signup" class="btn btn-info">Sign Up</a>
+        <%if(currentUser){ %>
+            <a href="/auth/logout" class="btn btn-info">Log Out, <%= currentUser.getFullName() %></a>
+        <%}%>
+        </div>
+    </body>
+</html>

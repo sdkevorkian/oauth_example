@@ -1,0 +1,12 @@
+
+<% if (alerts && alerts.success) { %>
+    <% alerts.success.forEach(function(msg) { %>
+        <div class="alert alert-success"><%=msg %></div>
+    <% }); %>
+<%} %>
+
+<% if (alerts && alerts.error) { %>
+    <% alerts.error.forEach(function(msg) { %>
+        <div class="alert alert-danger"><%=msg %></div>
+    <% }); %>
+<%} %>
